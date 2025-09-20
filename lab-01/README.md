@@ -12,6 +12,42 @@
 <img width="623" height="271" alt="CD4069_prop" src="https://github.com/user-attachments/assets/530a43a3-183a-479b-9e2d-9193c5bb9c78" />
 
 ## Trabajo previo
+## 4. Simulación de comportamiento ante señales de entrada
+## 5. Función de transferencia
+**CMOS**
+<img width="640" height="480" alt="CMOS_TransferFunction" src="https://github.com/user-attachments/assets/1d3188ed-c5cf-44c8-a143-da0507ca5a45" />
+
+$V_{IH}-min = 2.4$ V  
+$V_{IL}-max = 1.2$ V  
+$V_{OH}-min = 4.8$ V  
+$V_{OL}-max = 0$ V  
+
+**TTL**  
+<img width="640" height="480" alt="TTL_TransferFunction" src="https://github.com/user-attachments/assets/86901191-4af6-4e5d-bf49-a3e4df3cc1cf" />  
+
+$V_{IH}-min = 2.4$ V  
+$V_{IL}-max = 1.2$ V  
+$V_{OH}-min = 4.8$ V  
+$V_{OL}-max = 0$ V  
+
+## 6. Estimación de tiempos de conmutación  
+### CMOS  
+
+<img width="1897" height="719" alt="image" src="https://github.com/user-attachments/assets/fcfc18e7-81ff-4661-8846-5c312972ad86" />  
+
+$t_{pHL} = 80$ ns
+<img width="1897" height="719" alt="image" src="https://github.com/user-attachments/assets/2efe2687-ec48-4d66-8a61-7d32650dccc0" />  
+
+$t_{pLH} = 48$ ns
+
+### TTL
+<img width="1898" height="412" alt="image" src="https://github.com/user-attachments/assets/e17e4579-644b-4a6f-acf9-97f1f18a29ec" />  
+
+$t_{pHL} = 15$ ns  
+
+<img width="1898" height="584" alt="image" src="https://github.com/user-attachments/assets/bd0132e6-da80-49b8-8613-fcbc350ab6fc" />  
+
+$t_{pLH} = 15$ ns  
 
 ## 7. Estimación del consumo de potencia
 
@@ -250,7 +286,6 @@ En cuanto a $V_{OH}$ difiere en un 1.4\% con el original, puede deberse a interf
 **Señales independientes**
 ![TTL-raw](https://github.com/user-attachments/assets/d66accf0-8cb1-4bdb-8f4c-52e8830aec28)
 
-Actualizar valores
 $V_{IH} = 2$ V  
 $V_{IL} = 1.2$ V  
 $V_{OH} = 4.8$ V  
@@ -259,8 +294,27 @@ $V_{OL} = 0.2$ V
 **Análisis:** los valores hallados de $V_{OH}$ y $V_{OL}$ resultan más altos que los especificados en el datasheet. Esto se debe a que, en la práctica, la compuerta no está entregando corriente de salida, por lo que las condiciones de prueba difieren de las utilizadas por el fabricante. En consecuencia, los voltajes medidos se aproximan más a los valores ideales.
 Cabe destacar que las discrepancias en los valores $V_{IH}$ y $V_{IL}$ se deben a lo discutido previamente para CMOS, donde existe una región indeterminada y lo importante es que los valores dados por el fabricante yacen en los límites encontrados.
 
+### Tiempos de conmutación
+**TTL**
+![WhatsApp Image 2025-09-19 at 16 22 37(1)](https://github.com/user-attachments/assets/f0376067-1ad3-4600-a8fc-113ee670736d)
+**CMOS**
+![WhatsApp Image 2025-09-19 at 16 22 37(2)](https://github.com/user-attachments/assets/f08a43f4-147e-465c-b863-c216d325530f)
 
+#### TTL
+$t_r = 112$ *us*
+$t_f = 112$ *us*
+
+#### CMOS
+$t_r = 46$ *us*
+$t_f = 46$ *us*
+
+Según la datasheet el TTL debería ser más rápido que el CMOS, sin embargo para condiciones de carga ligera, la resistencia de salida más alta y asimétrica del TTL hacen que el CMOS sea más rápido.  
+
+Los tiempos hallados muestran discrepancias significativas respecto al datasheet. Esto se debe al método de medición. El uso del osciloscopio introduce inadvertidamente un circuito RC parásito, cuya constante de tiempo (τ) afecta de forma inherente la respuesta en frecuencia del sistema, afectando las magnitudes de tiempo observadas y generando un error sistemático en las mediciones.
+### Tiempos de propagación
+Dado que los tiempos de propagación miden el tiempo que toma en reaccionar la compuerta ante un cambio de estado en la entrada, **i.e.** H-> L o L-> H, se precisa de un pulso para poder evaluar claramente el instante en el que la entrada cambia para determinar la reacción. Al usar una señal triangular no fue posible determinar este instante.
 
 ## Parte 2(Determinación de FAN-IN y FAN-OUT)
 
 ## Parte 3(Oscilador de anillo)
+
