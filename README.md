@@ -172,7 +172,7 @@ $$
 
 
 ---
-### Oscilador en anillo basado en compuertas NOT
+## 8. Oscilador en anillo basado en compuertas NOT
 
 El **oscilador en anillo** es un circuito digital que genera una señal periódica a partir de un número **impar** de inversores (compuertas NOT) conectados en serie y realimentados en un lazo cerrado. La oscilación surge porque cada inversor introduce un **retardo de propagación** $(t_{pd})$ en la transición de la señal, lo cual impide que el sistema alcance un estado estable. Como resultado, el valor lógico se propaga alrededor del anillo generando una onda cuadrada en las salidas.
 
