@@ -13,21 +13,45 @@
 
 ## Trabajo previo
 ## 4. Simulación de comportamiento ante señales de entrada
-## 5. Función de transferencia
-**CMOS**
-<img width="640" height="480" alt="CMOS_TransferFunction" src="https://github.com/user-attachments/assets/1d3188ed-c5cf-44c8-a143-da0507ca5a45" />
+### CMOS
 
-$V_{IH}-min = 2.4$ V  
-$V_{IL}-max = 1.2$ V  
-$V_{OH}-min = 4.8$ V  
+**1 MHz**  
+<img width="1899" height="418" alt="image" src="https://github.com/user-attachments/assets/f6937552-9411-47d6-8071-1a23343b5976" />
+
+**100 kHz**  
+<img width="1899" height="418" alt="image" src="https://github.com/user-attachments/assets/4ff11ec4-0284-4fb0-ada8-847f8edcda20" />
+
+**1 Hz**  
+<img width="1899" height="418" alt="image" src="https://github.com/user-attachments/assets/fa250bc1-fc00-4073-a36e-9bb4436f1db0" />
+
+
+
+### TTL
+**1 MHz**  
+<img width="1899" height="418" alt="image" src="https://github.com/user-attachments/assets/2089fb51-b3b3-4b26-bdf8-55fc55c9d746" />  
+**100 kHz**  
+<img width="1899" height="418" alt="image" src="https://github.com/user-attachments/assets/4fcc4c43-f9f5-4080-9621-c7eb0263952e" />  
+
+**1 Hz**  
+<img width="1899" height="418" alt="image" src="https://github.com/user-attachments/assets/15893dfb-8c16-415c-8a82-9f6899af44b6" />  
+
+**Observaciones**
+Los tiempos de conmutación difieren al cambiar las frecuencias.
+## 5. Función de transferencia
+**CMOS**  
+<img width="1899" height="413" alt="image" src="https://github.com/user-attachments/assets/54bfc8d8-3ee5-49a6-959e-a69a8a73c2e4" />
+
+$V_{IH}-min = 2.6$ V  
+$V_{IL}-max = 2.4$ V  
+$V_{OH}-min = 4.975$ V  
 $V_{OL}-max = 0$ V  
 
 **TTL**  
-<img width="640" height="480" alt="TTL_TransferFunction" src="https://github.com/user-attachments/assets/86901191-4af6-4e5d-bf49-a3e4df3cc1cf" />  
+<img width="1899" height="413" alt="image" src="https://github.com/user-attachments/assets/6bc3165d-7c8f-447c-a4cb-23a0e515a47b" />
 
-$V_{IH}-min = 2.4$ V  
-$V_{IL}-max = 1.2$ V  
-$V_{OH}-min = 4.8$ V  
+$V_{IH}-min = 2.6$ V  
+$V_{IL}-max = 2.4$ V  
+$V_{OH}-min = 4.975$ V  
 $V_{OL}-max = 0$ V  
 
 ## 6. Estimación de tiempos de conmutación  
@@ -269,9 +293,7 @@ El circuito logra oscilar de manera autónoma gracias al retardo de propagación
 ![CMOS_image](https://github.com/user-attachments/assets/2da6ad6d-5bb7-4ff1-9692-2b64bf64f14e)
 
 $V_{IH}-min = 2.4$ V  
-$V_{IL}-max = 1.2$ V  
-
- 
+$V_{IL}-max = 1.2$ V   
 $V_{OH}-min = 4.8$ V  
 $V_{OL}-max = 0$ V  
 **NB!** Tomando en cuenta que la señal de salida cuenta con un pequeño offset negativo de 0.4V y el $V_P$ fue de 4.4 V, el $V_{OH}$ fue de 4.8 V 
@@ -317,4 +339,5 @@ Dado que los tiempos de propagación miden el tiempo que toma en reaccionar la c
 ## Parte 2(Determinación de FAN-IN y FAN-OUT)
 
 ## Parte 3(Oscilador de anillo)
+
 
