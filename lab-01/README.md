@@ -341,3 +341,13 @@ Dado que los tiempos de propagación miden el tiempo que toma en reaccionar la c
 ## Parte 3(Oscilador de anillo)
 
 
+## Referencias
+1.  Brown, S., & Vranesic, Z. (2014). *Fundamentals of Digital Logic with VHDL Design* (3rd ed.). McGraw-Hill.
+2.  Wakerly, J. F. (2005). *Digital Design: Principles and Practices* (4th ed.). Prentice Hall.
+3.  Sedra, A. S., & Smith, K. C. (2020). *Microelectronic Circuits* (8th ed.). Oxford University Press.
+4.  Texas Instruments. (2015). *CD4069UB CMOS Hex Inverter Datasheet* (Publication No. CD4069UB). Recuperado de https://www.ti.com/lit/ds/symlink/cd4069ub.pdf
+5.  Texas Instruments. (2017). *SN74LS04 Hex Inverter Datasheet* (Publication No. SN74LS04). Recuperado de https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
+6.  Texas Instruments. (2016). *A Guide to Logic Labels and Packaging* (Publication No. SCEA026). Recuperado de https://www.ti.com/lit/an/scea026/scea026.pdf
+
+
+
