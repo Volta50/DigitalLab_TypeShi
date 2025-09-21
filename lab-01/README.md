@@ -12,6 +12,28 @@
 <img width="623" height="271" alt="CD4069_prop" src="https://github.com/user-attachments/assets/530a43a3-183a-479b-9e2d-9193c5bb9c78" />
 
 ## Trabajo previo
+
+## 1. Comparacion de especificaciones tecnicas
+
+## Comparación de parámetros: 74LS04 (TTL) vs CD4069 (CMOS)
+
+| Parámetro | 74LS04 (TTL) | CD4069 (CMOS) | Unidad |
+|----------|--------------|--------------|-------|
+| **V<sub>IH</sub>** (mín. tensión nivel alto) | 2.0 | 1.5 | V |
+| **V<sub>IL</sub>** (máx. tensión nivel bajo) | 0.8 | 1.0 | V |
+| **V<sub>OH</sub>** (salida nivel alto)       | 3.4 | 5.0 | V |
+| **V<sub>OL</sub>** (salida nivel bajo)       | 0.25 | 0.05 | V |
+| **t<sub>PLH</sub>** (retardo bajo→alto)      | 9   | 55  | ns |
+| **t<sub>PHL</sub>** (retardo alto→bajo)      | 10  | 55  | ns |
+
+Los dispotisitvos CMOS son mas tolerantes al ruido y cambios en la señal de entrada, entregan una señal de salida mayor calidad.
+
+74LS04 (TTL) es 5 veces mas rapido en conmutacion que el CD4069 (CMOS) , util para altas frecuencias. 
+
+## 2. Circuito equivalente 
+
+
+
 ## 4. Simulación de comportamiento ante señales de entrada
 ### CMOS
 
@@ -361,6 +383,8 @@ De acuerdo con la teoría, un oscilador en anillo requiere un número impar de i
 4.  Texas Instruments. (2015). *CD4069UB CMOS Hex Inverter Datasheet* (Publication No. CD4069UB). Recuperado de https://www.ti.com/lit/ds/symlink/cd4069ub.pdf
 5.  Texas Instruments. (2017). *SN74LS04 Hex Inverter Datasheet* (Publication No. SN74LS04). Recuperado de https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
 6.  Texas Instruments. (2016). *A Guide to Logic Labels and Packaging* (Publication No. SCEA026). Recuperado de https://www.ti.com/lit/an/scea026/scea026.pdf
+
+
 
 
 
