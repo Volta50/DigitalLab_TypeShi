@@ -359,6 +359,30 @@ Los tiempos hallados muestran discrepancias significativas respecto al datasheet
 Dado que los tiempos de propagación miden el tiempo que toma en reaccionar la compuerta ante un cambio de estado en la entrada, **i.e.** H-> L o L-> H, se precisa de un pulso para poder evaluar claramente el instante en el que la entrada cambia para determinar la reacción. Al usar una señal triangular no fue posible determinar este instante.
 
 ## Parte 2(Determinación de FAN-IN y FAN-OUT)
+### TTL-SN74LS04
+**Fan-out = min[ Iₒₗ(ₘₐₓ) / Iᵢₗ(ₘₐₓ) , Iₒₕ(ₘₐₓ) / Iᵢₕ(ₘₐₓ) ]**
+
+| Parámetro | Símbolo | Valor |
+|-----------|---------|-------|
+| Corriente de Salida (Bajo) | Iₒₗ | 8 mA |
+| Corriente de Entrada (Bajo) | Iᵢₗ | 0.4 mA |
+| Corriente de Salida (Alto) | Iₒₕ | 0.4 mA |
+| Corriente de Entrada (Alto) | Iᵢₕ | 20 μA |
+
+**Fan-out(low) = 8 mA / 0.4 mA = 20**
+
+**Fan-out(high) = 0.4 mA / 0.02 mA = 20**
+
+**Fan-out máximo: 20 cargas**
+### CMOS-CD4069
+| Parámetro | Símbolo | Valor |
+|-----------|---------|-------|
+| Corriente de Salida (Bajo) | Iₒₗ | 0.5 mA |
+| Corriente de Entrada (Bajo) | Iᵢₗ | 0.1 μA |
+
+**Fan-out = 0.5 mA / 0.0001 mA = 5000**
+Es prácticamente ilimitado para aplicaciones DC
+
 
 ## Parte 3(Oscilador de anillo)
 
@@ -383,6 +407,7 @@ De acuerdo con la teoría, un oscilador en anillo requiere un número impar de i
 4.  Texas Instruments. (2015). *CD4069UB CMOS Hex Inverter Datasheet* (Publication No. CD4069UB). Recuperado de https://www.ti.com/lit/ds/symlink/cd4069ub.pdf
 5.  Texas Instruments. (2017). *SN74LS04 Hex Inverter Datasheet* (Publication No. SN74LS04). Recuperado de https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
 6.  Texas Instruments. (2016). *A Guide to Logic Labels and Packaging* (Publication No. SCEA026). Recuperado de https://www.ti.com/lit/an/scea026/scea026.pdf
+
 
 
 
