@@ -26,8 +26,13 @@
 | **t<sub>PLH</sub>** (retardo bajo→alto)      | 9   | 55  | ns |
 | **t<sub>PHL</sub>** (retardo alto→bajo)      | 10  | 55  | ns |
 
+Los dispotisitvos CMOS son mas tolerantes al ruido y cambios en la señal de entrada, entregan una señal de salida mayor calidad.
+
+74LS04 (TTL) es 5 veces mas rapido en conmutacion que el CD4069 (CMOS) , util para altas frecuencias. 
 
 ## 2. Circuito equivalente 
+
+
 
 ## 4. Simulación de comportamiento ante señales de entrada
 ### CMOS
@@ -378,6 +383,7 @@ De acuerdo con la teoría, un oscilador en anillo requiere un número impar de i
 4.  Texas Instruments. (2015). *CD4069UB CMOS Hex Inverter Datasheet* (Publication No. CD4069UB). Recuperado de https://www.ti.com/lit/ds/symlink/cd4069ub.pdf
 5.  Texas Instruments. (2017). *SN74LS04 Hex Inverter Datasheet* (Publication No. SN74LS04). Recuperado de https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
 6.  Texas Instruments. (2016). *A Guide to Logic Labels and Packaging* (Publication No. SCEA026). Recuperado de https://www.ti.com/lit/an/scea026/scea026.pdf
+
 
 
 
