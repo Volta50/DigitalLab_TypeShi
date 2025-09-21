@@ -340,6 +340,19 @@ Dado que los tiempos de propagación miden el tiempo que toma en reaccionar la c
 
 ## Parte 3(Oscilador de anillo)
 
+Al inicio del laboratorio se implementó el oscilador en anillo siguiendo la misma configuración utilizada en la simulación. Una vez montado el circuito, se procedió a medir la señal de salida con el osciloscopio. En el caso de la configuración con tres compuertas, se registró una frecuencia de aproximadamente 75 kHz, 
+
+![3 compuertas](Imag_lab/3_compuertas_anillo.jpg)
+
+Al modificar el montaje a cinco compuertas, la frecuencia obtenida fue de alrededor de 36 kHz.
+
+![5 compuertas](Imag_lab/5_compuertas_anillo.jpg)
+
+ En contraste, al realizar la prueba con dos y cuatro compuertas, no se observó oscilación en la salida.
+
+**Análisis**
+
+De acuerdo con la teoría, un oscilador en anillo requiere un número impar de inversores para garantizar la inversión neta del lazo y, por lo tanto, la condición de oscilación. Esto explica que solo las configuraciones con tres y cinco etapas presentaran oscilación. Además, los resultados experimentales concuerdan con la relación teórica de que al incrementar el número de etapas, la frecuencia de oscilación disminuye, puesto que el delay total del incrementa.
 
 ## Referencias
 1.  Brown, S., & Vranesic, Z. (2014). *Fundamentals of Digital Logic with VHDL Design* (3rd ed.). McGraw-Hill.
