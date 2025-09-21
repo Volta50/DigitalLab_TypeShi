@@ -32,7 +32,13 @@ Los dispotisitvos CMOS son mas tolerantes al ruido y cambios en la señal de ent
 
 ## 2. Circuito equivalente 
 
+<img width="1899" height="418" alt="image" src="https://github.com/Volta50/DigitalLab_TypeShi/blob/7c1169cb5eb967c2ab5d466971f36e90be10a58a/lab-01/Imag_sim/Compuertas.jpg" /> 
 
+Equivalente del circuito 74LS04 y CD4069. 
+
+## 3. Importación y configuración de modelos SPICE
+
+Se importaron y configuraron los modelos siguiendo la secciòn del material de apoyo.  
 
 ## 4. Simulación de comportamiento ante señales de entrada
 ### CMOS
@@ -383,6 +389,7 @@ De acuerdo con la teoría, un oscilador en anillo requiere un número impar de i
 4.  Texas Instruments. (2015). *CD4069UB CMOS Hex Inverter Datasheet* (Publication No. CD4069UB). Recuperado de https://www.ti.com/lit/ds/symlink/cd4069ub.pdf
 5.  Texas Instruments. (2017). *SN74LS04 Hex Inverter Datasheet* (Publication No. SN74LS04). Recuperado de https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
 6.  Texas Instruments. (2016). *A Guide to Logic Labels and Packaging* (Publication No. SCEA026). Recuperado de https://www.ti.com/lit/an/scea026/scea026.pdf
+
 
 
 
