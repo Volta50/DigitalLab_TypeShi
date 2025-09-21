@@ -314,6 +314,9 @@ El circuito logra oscilar de manera autónoma gracias al retardo de propagación
 
 
 ## Parte 1(Comprobación de specs)
+
+La memoria USB utilizada para la practica presento errores al parecer por la particion Linux, las graficas fuerons registradas en fotos como un respaldo. 
+
 ### NOT CMOS: CD4069ube
 **Función de transferencia**
 ![TF_CD4069](https://github.com/user-attachments/assets/7469a495-12ad-466f-94b0-d7749f854982)
@@ -389,6 +392,7 @@ De acuerdo con la teoría, un oscilador en anillo requiere un número impar de i
 4.  Texas Instruments. (2015). *CD4069UB CMOS Hex Inverter Datasheet* (Publication No. CD4069UB). Recuperado de https://www.ti.com/lit/ds/symlink/cd4069ub.pdf
 5.  Texas Instruments. (2017). *SN74LS04 Hex Inverter Datasheet* (Publication No. SN74LS04). Recuperado de https://www.ti.com/lit/ds/symlink/sn74ls04.pdf
 6.  Texas Instruments. (2016). *A Guide to Logic Labels and Packaging* (Publication No. SCEA026). Recuperado de https://www.ti.com/lit/an/scea026/scea026.pdf
+
 
 
 
