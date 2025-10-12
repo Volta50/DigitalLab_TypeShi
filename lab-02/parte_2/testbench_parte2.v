@@ -1,17 +1,14 @@
 `timescale 1ns/1ps
 
-module tb_sumador_restador;
+module tb_sumadorRestador4bit;
 
-    // Entradas
     reg [3:0] A, B;
-    reg Sel; // 0 = suma, 1 = resta
-
-    // Salidas
+    reg Sel;
     wire [3:0] s0;
     wire Co;
 
-    // Instancia del módulo bajo prueba (UUT)
-    sumador_Restador4bit uut (
+    // Instancia del módulo bajo prueba
+    sumador_Restador4bit dut (
         .A(A),
         .B(B),
         .Sel(Sel),
@@ -19,41 +16,46 @@ module tb_sumador_restador;
         .Co(Co)
     );
 
-    // Variables para comprobar resultados
-    reg [4:0] expected; // un bit extra para el carry
-
-    integer i, j; // iteradores
+    integer i, j, k;
+    integer errores = 0;
+    reg [4:0] resultado_esperado; // 5 bits = {Co, s0}
+    reg esperado_Co;
 
     initial begin
-        $display("Tiempo | Sel |   A   |   B   |  s0  | Co | Resultado esperado");
-        $display("-------------------------------------------------------------");
-
-        // Probar todas las combinaciones de A y B
-        for (Sel = 0; Sel <= 1; Sel = Sel + 1) begin
+        $display("Iniciando prueba exhaustiva...");
+        for (k = 0; k < 2; k = k + 1) begin
+            Sel = k;
             for (i = 0; i < 16; i = i + 1) begin
                 for (j = 0; j < 16; j = j + 1) begin
                     A = i;
                     B = j;
-                    #5; // esperar un poco
-                    if (Sel == 0)
-                        expected = A + B;     // suma
-                    else
-                        expected = A - B;     // resta
+                    #1; // pequeño delay
 
-                    $display("%4t |  %b  | %4b | %4b | %4b |  %b |  %5b",
-                             $time, Sel, A, B, s0, Co, expected);
+                    if (Sel == 0) begin
+                        // ---- SUMA normal ----
+                        resultado_esperado = A + B;
+                        esperado_Co = resultado_esperado[4];
+                    end else begin
+                        // ---- RESTA en complemento a 2 ----
+                        resultado_esperado = A + (~B + 1);
+                        esperado_Co = ~resultado_esperado[4]; // <- Co invertido
+                    end
 
-                    // Verificar si coincide
-                    if ({Co, s0} !== expected)
-                        $display("❌ Error: A=%d B=%d Sel=%b -> Esperado=%b, Obtenido={Co,s0}=%b",
-                                  A, B, Sel, expected, {Co, s0});
-                    else
-                        $display("✅ Correcto");
+                    // Comparar resultado (4 bits) y carry correcto
+                    if (s0 !== resultado_esperado[3:0] || Co !== esperado_Co) begin
+                        $display("❌ Error: Sel=%b A=%b B=%b | Esperado: s0=%b Co=%b | Obtenido: s0=%b Co=%b",
+                                 Sel, A, B, resultado_esperado[3:0], esperado_Co, s0, Co);
+                        errores = errores + 1;
+                    end
                 end
             end
         end
 
-        $display("Pruebas completadas.");
+        if (errores == 0)
+            $display("✅ Todas las combinaciones pasaron correctamente!");
+        else
+            $display("❌ Se encontraron %d errores.", errores);
+
         $finish;
     end
 
