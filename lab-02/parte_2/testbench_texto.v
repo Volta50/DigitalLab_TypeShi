@@ -20,13 +20,13 @@ module tb_sumadorRestador4bit;
     reg [4:0] resultado_esperado; 
     reg esperado_Co;
 
-    // 📁 archivo de salida
+    // archivo de salida
     integer file;
 
     initial begin
         file = $fopen("resultados.txt", "w"); // crea el archivo
         if (file == 0) begin
-            $display("❌ Error al abrir el archivo resultados.txt");
+            $display(" Error al abrir el archivo resultados.txt");
             $finish;
         end
 
@@ -70,9 +70,9 @@ module tb_sumadorRestador4bit;
 
         $fwrite(file, "------------------------------------------------------\n");
         if (errores == 0)
-            $fwrite(file, "✅ No hubo errores.\n");
+            $fwrite(file, "No hubo errores.\n");
         else
-            $fwrite(file, "⚠️  Hubo %0d errores.\n", errores);
+            $fwrite(file, " Hubo %0d errores.\n", errores);
 
         $fclose(file);
         $display("Simulación finalizada. Resultados guardados en resultados.txt");
