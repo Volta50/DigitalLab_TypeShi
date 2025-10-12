@@ -7,8 +7,7 @@ module tb_sumadorRestador4bit;
     wire [3:0] s0;
     wire Co;
 
-    // Instancia del módulo bajo prueba
-    sumador_Restador4bit dut (
+    sumador_Restador4bit modulo_de_prueba (
         .A(A),
         .B(B),
         .Sel(Sel),
@@ -18,11 +17,11 @@ module tb_sumadorRestador4bit;
 
     integer i, j, k;
     integer errores = 0;
-    reg [4:0] resultado_esperado; // 5 bits = {Co, s0}
+    reg [4:0] resultado_esperado; 
     reg esperado_Co;
 
     initial begin
-        $display("Iniciando prueba exhaustiva...");
+        $display("Iniciando prueba...");
         for (k = 0; k < 2; k = k + 1) begin
             Sel = k;
             for (i = 0; i < 16; i = i + 1) begin
@@ -43,7 +42,7 @@ module tb_sumadorRestador4bit;
 
                     // Comparar resultado (4 bits) y carry correcto
                     if (s0 !== resultado_esperado[3:0] || Co !== esperado_Co) begin
-                        $display("❌ Error: Sel=%b A=%b B=%b | Esperado: s0=%b Co=%b | Obtenido: s0=%b Co=%b",
+                        $display("Error: Sel=%b A=%b B=%b | Esperado: s0=%b Co=%b | Obtenido: s0=%b Co=%b",
                                  Sel, A, B, resultado_esperado[3:0], esperado_Co, s0, Co);
                         errores = errores + 1;
                     end
@@ -52,9 +51,9 @@ module tb_sumadorRestador4bit;
         end
 
         if (errores == 0)
-            $display("✅ Todas las combinaciones pasaron correctamente!");
+            $display("No hubo errores");
         else
-            $display("❌ Se encontraron %d errores.", errores);
+            $display("Hubo %d errores.", errores); //imprime contador de errores
 
         $finish;
     end
