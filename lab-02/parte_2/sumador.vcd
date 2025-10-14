@@ -1,0 +1,113 @@
+$date
+	Tue Oct 14 08:37:39 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_sumadorRestador4bit $end
+$var wire 4 ! s0 [3:0] $end
+$var wire 1 " Co $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % Sel $end
+$scope module modulo_de_prueba $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % Sel $end
+$var wire 4 ( s0 [3:0] $end
+$var wire 4 ) Cout [3:0] $end
+$var wire 1 " Co $end
+$var wire 4 * Bx [3:0] $end
+$scope module sum_n0 $end
+$var wire 1 + A $end
+$var wire 1 , B $end
+$var wire 1 % Cin $end
+$var wire 1 - Co $end
+$var wire 1 . So $end
+$var wire 1 / a_ab $end
+$var wire 1 0 cout_t $end
+$var wire 1 1 x_ab $end
+$upscope $end
+$scope module sum_n1 $end
+$var wire 1 2 A $end
+$var wire 1 3 B $end
+$var wire 1 4 Cin $end
+$var wire 1 5 Co $end
+$var wire 1 6 So $end
+$var wire 1 7 a_ab $end
+$var wire 1 8 cout_t $end
+$var wire 1 9 x_ab $end
+$upscope $end
+$scope module sum_n2 $end
+$var wire 1 : A $end
+$var wire 1 ; B $end
+$var wire 1 < Cin $end
+$var wire 1 = Co $end
+$var wire 1 > So $end
+$var wire 1 ? a_ab $end
+$var wire 1 @ cout_t $end
+$var wire 1 A x_ab $end
+$upscope $end
+$scope module sum_n3 $end
+$var wire 1 B A $end
+$var wire 1 C B $end
+$var wire 1 D Cin $end
+$var wire 1 " Co $end
+$var wire 1 E So $end
+$var wire 1 F a_ab $end
+$var wire 1 G cout_t $end
+$var wire 1 H x_ab $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+16
+05
+14
+03
+02
+01
+00
+1/
+0.
+1-
+1,
+1+
+b1 *
+bz001 )
+b10 (
+b1 '
+b1 &
+0%
+b1 $
+b1 #
+0"
+b10 !
+$end
+#5000
