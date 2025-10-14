@@ -16,15 +16,22 @@ module tb_sumadorRestador4bit;
     );
 
     initial begin
-        A = 1;
-        B = 1;
-        Sel = 0;
+           for (k = 0; k < 2; k = k + 1) begin
+                Sel = k;
+                for (i = 0; i < 16; i = i + 1) begin
+                    for (j = 0; j < 16; j = j + 1) begin
+                                A = i;
+                                B = j;
+                                
         $dumpfile("sumador.vcd");            // crea archivo de ondas
         $dumpvars(0, tb_sumadorRestador4bit); // guarda todas las señales del testbench y submódulos
 
 
         #5;
      $finish;
+                    
+                
+           
     end
 
 endmodule
