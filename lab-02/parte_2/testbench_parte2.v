@@ -31,13 +31,13 @@ module tb_sumadorRestador4bit;
                     #1; // pequeño delay
 
                     if (Sel == 0) begin
-                        // ---- SUMA normal ----
+                        // suma
                         resultado_esperado = A + B;
                         esperado_Co = resultado_esperado[4];
                     end else begin
-                        // ---- RESTA en complemento a 2 ----
+                        // suma complemento a 2 (resta)
                         resultado_esperado = A + (~B + 1);
-                        esperado_Co = ~resultado_esperado[4]; // <- Co invertido
+                        esperado_Co = ~resultado_esperado[4]; //c0 invertido
                     end
 
                     // Comparar resultado (4 bits) y carry correcto
