@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_sumadorRestador4bit;
+module tb_sumadorRestador4bit_prueba_gtkwave;
 
     reg [3:0] A, B;
     reg Sel;
@@ -15,7 +15,16 @@ module tb_sumadorRestador4bit;
         .Co(Co)
     );
 
+    integer i, j, k;
+
+
     initial begin
+
+        $dumpfile("sumador.vcd");            // crea archivo de ondas
+        $dumpvars(0, tb_sumadorRestador4bit_prueba_gtkwave); // guarda todas las señales del testbench y submódulos
+
+        #1;
+/*
            for (k = 0; k < 2; k = k + 1) begin
                 Sel = k;
                 for (i = 0; i < 16; i = i + 1) begin
@@ -23,11 +32,21 @@ module tb_sumadorRestador4bit;
                                 A = i;
                                 B = j;
                                 
-        $dumpfile("sumador.vcd");            // crea archivo de ondas
-        $dumpvars(0, tb_sumadorRestador4bit); // guarda todas las señales del testbench y submódulos
+                                #10;
+                    end
+                end
+           end
+*/
+                                
 
+            A=1;
+            Sel=1;
+            B=1;
+                                
+        
 
-        #5;
+     
+
      $finish;
                     
                 

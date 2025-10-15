@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module tb_sumadorRestador4bit;
+module tb_sumadorRestador4bit_pureba_salida_texto;
 
     reg [3:0] A, B;
     reg Sel;

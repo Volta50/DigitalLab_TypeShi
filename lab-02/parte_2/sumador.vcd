@@ -1,5 +1,5 @@
 $date
-	Tue Oct 14 08:37:39 2025
+	Wed Oct 15 18:11:42 2025
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1ps
 $end
-$scope module tb_sumadorRestador4bit $end
+$scope module tb_sumadorRestador4bit_prueba_gtkwave $end
 $var wire 4 ! s0 [3:0] $end
 $var wire 1 " Co $end
 $var reg 4 # A [3:0] $end
@@ -69,45 +69,85 @@ $dumpall
 $end
 #0
 $dumpvars
-0H
-0G
-0F
-0E
-0D
-0C
-0B
-0A
-0@
-0?
-0>
-0=
-0<
-0;
-0:
-09
-08
-07
-16
-05
-14
-03
-02
-01
-00
-1/
-0.
-1-
-1,
-1+
-b1 *
-bz001 )
-b10 (
-b1 '
-b1 &
-0%
-b1 $
-b1 #
-0"
-b10 !
+xH
+xG
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+bx *
+bzxxx )
+bx (
+bx '
+bx &
+x%
+bx $
+bx #
+x"
+bx !
 $end
-#5000
+#1000
+1"
+1G
+0E
+1D
+1=
+1@
+0>
+1<
+15
+18
+06
+14
+bz111 )
+1-
+10
+b0 !
+b0 (
+0.
+11
+0/
+19
+1A
+1H
+0,
+13
+1;
+1C
+b1110 *
+07
+0?
+0F
+1+
+02
+0:
+0B
+b1 $
+b1 '
+1%
+b1 #
+b1 &
