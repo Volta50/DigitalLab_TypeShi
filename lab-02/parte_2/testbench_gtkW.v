@@ -7,6 +7,8 @@ module tb_sumadorRestador4bit_prueba_gtkwave;
     wire [3:0] s0;
     wire Co;
 
+    /*
+
     sumador_Restador4bit modulo_de_prueba (
         .A(A),
         .B(B),
@@ -14,6 +16,8 @@ module tb_sumadorRestador4bit_prueba_gtkwave;
         .s0(s0),
         .Co(Co)
     );
+
+    */
 
     integer i, j, k;
 
@@ -39,13 +43,14 @@ module tb_sumadorRestador4bit_prueba_gtkwave;
 */
                                 
 
-            A=1;
-            Sel=1;
-            B=1;
-                                
-        
+        #1;
+        A = 4'b0001;
+        B = 4'b0010;
+        Sel = 1;
+        #10;
+        $display("Simulación iniciada");
+        $monitor("t=%0t A=%b B=%b Sel=%b", $time, A, B, Sel);
 
-     
 
      $finish;
                     
