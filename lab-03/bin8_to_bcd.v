@@ -25,3 +25,22 @@ module bin8_to_bcd(
     end
 
 endmodule
+
+module algorithm(
+    input  [7:0] bin,
+    output reg [3:0] hundreds,
+    output reg [3:0] tens,
+    output reg [3:0] ones
+);
+
+integer i;
+reg [12:0] shift_reg;
+    always @(*) begin
+        for(i = 0; i<5;i 0 i+1)begin
+                        
+
+
+        end
+    end
+
+endmodule
