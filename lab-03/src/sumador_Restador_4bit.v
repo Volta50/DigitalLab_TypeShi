@@ -16,6 +16,6 @@ module sumador_Restador4bit(
     assign Bx[3] = B[3] ^ Sel;
 
     // Cadena de sumadores de 1 bit
-    sumador4Bits s4b (A,B, Sel,So,Co);
+    sumador4Bits s4b (A,Bx, Sel,So,Co);
 
 endmodule
